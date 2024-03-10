@@ -40,7 +40,7 @@ VOLUME /app/assets
 #USER henry
 # /var/lib/docker/volumes/logs/ à l'extérieur du container
 # Build
-RUN CGO_ENABLED=0 GOOS=linux go build -o mw7 cmd/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o mw8 cmd/main.go
 
 
 # Optional:
@@ -53,12 +53,12 @@ USER henry
 
 ENV MYSQL_HOST db
 ENV MYSQL_PORT 3306
-ENV MYSQL_DATABASE basemw7
+ENV MYSQL_DATABASE basemw8
 ENV MYSQL_USER henry
 ENV MYSQL_PASSWORD 1nhri96p
 # Run
-CMD ["./mw7"]
-# Pour construire le container avec le nom mw7
-# docker build -t mw7 .
+CMD ["./mw8"]
+# Pour construire le container avec le nom mw8
+# docker build -t mw8 .
 # Pour lancer l'application 
-# docker run --name mw7 -it --rm -p 8080:8080 -v /home/henry/go/src/mw7/logs:/app/logs -v /home/henry/go/src/mw7/data:/app/data -v /home/henry/go/src/mw7/templates:/app/templates -v /home/henry/go/src/mw7/assets:/app/assets mw7
+# docker run --name mw8 -it --rm -p 8080:8080 -v /home/henry/go/src/mw8/logs:/app/logs -v /home/henry/go/src/mw8/data:/app/data -v /home/henry/go/src/mw8/templates:/app/templates -v /home/henry/go/src/mw8/assets:/app/assets mw8

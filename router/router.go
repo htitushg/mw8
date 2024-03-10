@@ -1,7 +1,7 @@
 package router
 
 import (
-	"Mw7/controllers"
+	"mw8/controllers"
 	"net/http"
 )
 

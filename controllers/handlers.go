@@ -1,15 +1,16 @@
 package controllers
 
 import (
-	database "Mw7/database"
-	"Mw7/internal/middlewares"
-	"Mw7/internal/models"
-	"Mw7/internal/utils"
 	"encoding/json"
 	"fmt"
 	"html/template"
 	"log"
 	"log/slog"
+
+	database "mw8/database"
+	"mw8/internal/middlewares"
+	"mw8/internal/models"
+	"mw8/internal/utils"
 	"net/http"
 	"strconv"
 	"strings"
@@ -307,7 +308,8 @@ func ModifUserHandlerPost(w http.ResponseWriter, r *http.Request) {
 		}
 		if user.Email != formValues.email {
 			log.Printf("L'email de l'utilisateur à changé: %#v, au lieu de %v\n", formValues.email, user.Email)
-			if !database.EmailExist(formValues.email) {
+			_, ok := database.EmailExist(formValues.email)
+			if !ok {
 				emailchanged = true
 				user.Email = formValues.email
 			} else {

@@ -36,7 +36,7 @@ var Conf_Mysql TConf_Mysql
 const (
 	Port = ":8080"
 
-// NomBase = "basemw7"
+// NomBase = "basemw8"
 )
 
 type Credentials struct {
@@ -46,6 +46,7 @@ type Credentials struct {
 type User struct {
 	Id        int    `json:"id"`
 	Pseudo    string `json:"Pseudo"`
+	Droits    string `json:"Droits"`
 	HashedPwd string `json:"hash"`
 	Salt      string `json:"salt"`
 	Email     string `json:"email"`

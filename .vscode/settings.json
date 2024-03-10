@@ -9,8 +9,8 @@
             "server": "localhost",
             "port": 3307,
             "driver": "MySQL",
-            "name": "basemw7",
-            "database": "basemw7",
+            "name": "basemw8",
+            "database": "basemw8",
             "username": "henry"
         },
         {
@@ -22,8 +22,8 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "basemw7_local",
-            "database": "basemw7",
+            "name": "basemw8_local",
+            "database": "basemw8",
             "username": "henry"
         }
     ]

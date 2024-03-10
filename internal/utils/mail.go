@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"Mw7/internal/models"
 	"bytes"
 	"crypto/rand"
 	"crypto/tls"
@@ -11,6 +10,7 @@ import (
 	"html/template"
 	"log"
 	"log/slog"
+	"mw8/internal/models"
 	"net"
 	"net/smtp"
 	"os"

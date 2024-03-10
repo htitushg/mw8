@@ -1,6 +1,6 @@
 package main
 
-import "Mw7/server"
+import "mw8/server"
 
 func main() {
 	server.Run()

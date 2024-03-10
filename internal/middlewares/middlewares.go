@@ -1,10 +1,10 @@
 package middlewares
 
 import (
-	"Mw7/internal/models"
-	"Mw7/internal/utils"
 	"log"
 	"log/slog"
+	"mw8/internal/models"
+	"mw8/internal/utils"
 	"net/http"
 )
 

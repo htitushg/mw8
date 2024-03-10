@@ -1,6 +1,6 @@
 package controllers
 
-import "Mw7/internal/middlewares"
+import "mw8/internal/middlewares"
 
 var IndexHandlerGetBundle = middlewares.Join(indexHandlerGet, middlewares.Log, middlewares.UserCheck)
 var IndexHandlerPutBundle = middlewares.Join(indexHandlerPut, middlewares.Log, middlewares.Guard)

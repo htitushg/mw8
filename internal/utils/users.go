@@ -1,9 +1,9 @@
 package utils
 
 import (
-	database "Mw7/database"
-	"Mw7/internal/models"
 	"log"
+	database "mw8/database"
+	"mw8/internal/models"
 	"time"
 )
 

@@ -1,12 +1,12 @@
 package server
 
 import (
-	database "Mw7/database"
-	"Mw7/internal/models"
-	"Mw7/internal/utils"
-	"Mw7/router"
 	"html/template"
 	"log"
+	database "mw8/database"
+	"mw8/internal/models"
+	"mw8/internal/utils"
+	"mw8/router"
 	"net/http"
 	"os"
 )
@@ -15,7 +15,7 @@ func Run() {
 	// Initializing database
 	/* models.Conf_Mysql.Host = "127.0.0.1"
 	models.Conf_Mysql.Port = "3306"
-	models.Conf_Mysql.Database = "basemw7"
+	models.Conf_Mysql.Database = "basemw8"
 	models.Conf_Mysql.User = "henry"
 	models.Conf_Mysql.Password = "11nhri04p" */
 

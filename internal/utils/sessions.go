@@ -1,11 +1,11 @@
 package utils
 
 import (
-	database "Mw7/database"
-	"Mw7/internal/models"
 	"crypto/rand"
 	"encoding/base64"
 	"log/slog"
+	database "mw8/database"
+	"mw8/internal/models"
 	"net/http"
 	"time"
 )
