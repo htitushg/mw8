@@ -1,0 +1,28 @@
+{{define "content"}}
+    <div class="login-container">
+    <p class="modifusertitre">ENREGISTREMENT D'UN NOUVEL UTILISATEUR</p>
+    <form action="/register" method="post" class="modifuserform">
+        {{.}}
+        <div class="part2">
+            <li class="modifuserlabel"><label name="pseudo">Pseudo</label></li>
+            <li><input type="text" name="pseudo" id="pseudo" class="modifuserinput" required ></li>
+        </div>
+        <div class="part2">
+            <li class="modifuserlabel"><label name="email">Email</label></li>
+            <input type="email" name="email" id="email" class="modifuserinput" required>
+        </div>
+        <div class="part2">
+            <li class="modifuserlabel"><label name="password1">Password</label></li>
+            <input type="password" name="password1" id="password1" class="modifuserinput" >
+        </div>
+        <div class="part2">
+            <li class="modifuserlabel"><label name="password2">Confirm Password</label></li>
+            <input type="password" name="password2" id="password2" class="modifuserinput" >
+        </div>
+        <div class="modifuserlogin">
+            <button type="submit" class="bouton2">Validation</button>
+            <a href="/login" class="bouton2">Retour</a>
+        </div>
+    </form>
+    </div>
+{{end}}

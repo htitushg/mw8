@@ -1,0 +1,16 @@
+{{ define "content" }}
+<div class="login-container">
+<p class="modifusertitre">Fenêtre de connexion</p>
+<form action="/login" method="post" class="modifuserform">
+    {{.}}
+    <li class="modifuserlabel"><label name="pseudo">Username</label></li>
+        <input type="text" name="Pseudo" id="Pseudo" class="modifuserinput" required autofocus>
+    <li class="modifuserlabel"><label name="password1">Password</label></li>
+        <input type="password" name="password" id="password" class="modifuserinput" required>
+        <div class="modifuserlogin">
+    <button class="bouton2">Login</button>
+    </div>
+</form>
+<a href="/register" class="bouton2">Register</a>
+</div>
+{{end}}

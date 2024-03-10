@@ -1,0 +1,32 @@
+{{define "content"}}
+        <div class="login-container">
+        <p class="modifusertitre">MODIFICATION DES INFORMATIONS UTILISATEUR</p>
+            <form action="/modifuser" method="post" class="modifuserform">
+                {{.Message}}
+                <div class="part2">
+                <li class="modifuserlabel"><label name="pseudo">Pseudo</label></li>
+                <li><input type="text" name="pseudo" id="pseudo" value="{{.Username}}" class="modifuserinput" required ></li>
+                </div>
+                <div class="part2">
+                <li class="modifuserlabel"><label name="email">Courriel</label></li>
+                    <input type="email" name="email" id="email" value="{{.Email}}" class="modifuserinput" required>
+                </div>
+                <div class="part2">
+                <li class="modifuserlabel"><label name="actualpassword">Actual Password</label></li>
+                <input type="password" name="actualpassword" id="actualpassword" class="modifuserinput" required autofocus>
+                </div>
+                <div class="part2">
+                <li class="modifuserlabel"><label name="password1">New Password</label></li>
+                <input type="password" name="password1" id="password1" class="modifuserinput" >
+                </div>
+                <div class="part2">
+                <li class="modifuserlabel"><label name="password2">Confirm New Password</label></li>
+                <input type="password" name="password2" id="password2" class="modifuserinput" >
+                </div>
+                <div class="modifuserlogin">
+                <button type="submit" class="bouton2">Validation Modification</button>
+                <a href="/login" class="bouton2">Retour</a>
+                </div>
+            </form>     
+        </div>
+{{end}}

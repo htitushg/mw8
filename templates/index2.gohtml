@@ -1,0 +1,15 @@
+{{ define "content" }}
+
+<div class="login-container">
+<div class="corps"><p>Page d'Index</p></div>
+<form action="/" method="get"><button class="bouton2">Index page</button></form>
+<form action="/login" method="get"><button class="bouton2">Login</button></form>
+<form action="/modifuser" method="get"><button class="bouton2">Modification Utilisateur</button></form>
+<form action="/register" method="get"><button class="bouton2">Register</button></form>
+<form action="/add" method="post"><button class="bouton2">Add (require login)</button></form>
+<form action="/logout" method="get"><button class="bouton2">Logout</button></form>
+<form action="/logs" method="get"><button class="bouton2">Logs</button></form>
+<div><p class="token">{{.}}</p></div>
+</div>
+
+{{end}}

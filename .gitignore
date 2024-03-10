@@ -1,0 +1,8 @@
+
+config/
+mysql_data/
+logs/
+base*.*
+lancement_docker.sh
+demande_gemini.txt
+.dockerignore

@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'basemw7'
+      MYSQL_USER: 'henry'
+      MYSQL_PASSWORD: '1nhri96p'
+      MYSQL_ROOT_PASSWORD: '1nhri96p'  # Optional, use with caution
+    ports:
+      - 3307:3306  # Consider mapping to a different port to avoid conflicts
+    volumes:
+      - /home/henry/go/src/Mw7/mysql_data:/var/lib/mysql
+          #mode: "775"
+          #uid: "999"
+          #gid: "999"
+  web:
+    image: mw7
+    environment:
+      MYSQL_HOST: 'db'  # Use the service name 'db' to connect to the database
+      MYSQL_PORT_NUMBER: 3306
+      MYSQL_DATABASE: 'basemw7'
+      MYSQL_USER: 'henry'
+      MYSQL_PASSWORD: '1nhri96p'
+    command: ./mw7  # Run the executable directly from within the container
+    volumes:
+      - ./logs:/app/logs  # Map local logs directory to container logs directory
+      - ./data:/app/data  # Map local data directory to container data directory
+      - ./templates:/app/templates  # Map local templates directory to container templates directory
+      - ./assets:/app/assets  # Map local assets directory to container assets directory
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
+    driver: local  # Optional, this volume is already defined in the db service

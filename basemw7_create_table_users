@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS users (
+    id int,
+    pseudo varchar(25) NOT NULL,
+    email varchar(30) NOT NULL,
+    hashedPwd varchar(250),
+    salt varchar(250),
+    PRIMARY KEY(id)
+);
