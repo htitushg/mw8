@@ -110,6 +110,7 @@ func SendMail(temp *models.TempUser, categorie string) {
 	)
 
 	// Sending the mail using TLS
+	log.Printf("SendMail: %s:%d\n", config.Hostname, config.Port)
 	err = sendMailTLS(
 		fmt.Sprintf("%s:%d", config.Hostname, config.Port),
 		auth,

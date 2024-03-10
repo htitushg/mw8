@@ -8,25 +8,25 @@ import (
 	"mw8/internal/utils"
 	"mw8/router"
 	"net/http"
-	"os"
 )
 
 func Run() {
 	// Initializing database
-	/* models.Conf_Mysql.Host = "127.0.0.1"
+	models.Conf_Mysql.Host = "127.0.0.1"
 	models.Conf_Mysql.Port = "3306"
 	models.Conf_Mysql.Database = "basemw8"
 	models.Conf_Mysql.User = "henry"
-	models.Conf_Mysql.Password = "11nhri04p" */
+	models.Conf_Mysql.Password = "11nhri04p"
 
-	models.Conf_Mysql.Host = os.Getenv("MYSQL_HOST")
+	/* models.Conf_Mysql.Host = os.Getenv("MYSQL_HOST")
 	models.Conf_Mysql.Port = os.Getenv("MYSQL_PORT")
 	models.Conf_Mysql.Database = os.Getenv("MYSQL_DATABASE")
 	models.Conf_Mysql.User = os.Getenv("MYSQL_USER")
-	models.Conf_Mysql.Password = os.Getenv("MYSQL_PASSWORD")
+	models.Conf_Mysql.Password = os.Getenv("MYSQL_PASSWORD") */
 	database.InitDB(models.Conf_Mysql.Database)
 	// Initialize templates
 	tmplPath := utils.Path + "templates/"
+	log.Printf("Chemin des templates : %v\n", tmplPath)
 	models.Tmpl["index"] = template.Must(template.ParseFiles(tmplPath+"index2.gohtml", tmplPath+"layouts/base.layout.gohtml"))
 	models.Tmpl["login"] = template.Must(template.ParseFiles(tmplPath+"login2.gohtml", tmplPath+"layouts/base.layout.gohtml"))
 	models.Tmpl["modifuser"] = template.Must(template.ParseFiles(tmplPath+"modifuser2.gohtml", tmplPath+"layouts/base.layout.gohtml"))
